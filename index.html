@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Расчет стоимости доставки</title>
+  </head>
+  <body>
+    <div class="fromCaterina">
+      <div class="calcForm">
+        <div class="calcForm__weight">
+          <label for="weightNumberInput">Вес посылки (до - 10000):</label>
+          <input
+            type="number"
+            id="weightNumberInput"
+            name="tentacles"
+            min="1"
+            max="10000"
+          />
+          <input
+            type="range"
+            id="weightRangeInput"
+            min="1"
+            max="10000"
+            value="1"
+            step="1"
+          />
+        </div>
+        <div class="calcForm__region">
+          <label for="region">Регион - куда доставлять:</label>
+          <select name="region" id="region">
+            <option value="null" selected disabled>выберите Регион</option>
+            <option value="Asia">Азия</option>
+            <option value="Europe">Европа</option>
+            <option value="Usa">США</option>
+            <option value="ToMoscow">Москва</option>
+          </select>
+        </div>
+        <div class="calcForm__service js-services-form"></div>
+      </div>
+      <div class="shipingInfo">
+        <h5>Информация по доставке:</h5>
+        <div class="shipingWeight">
+          Вес груза: <span class="data">не выбрано</span>
+        </div>
+        <div class="shipingRegion">
+          Куда доставить: <span class="data">не выбрано</span>
+        </div>
+        <div class="shipingService">
+          Служба доставки: <span class="data">не выбрано</span>
+        </div>
+        <div class="shipingCost">
+          Стоимость Доставки: <span class="data">нет данных</span>
+        </div>
+      </div>
+      <div class="calcTables"></div>
+    </div>
+    <script src="./js/calcCaterina.js" type="module"></script>
+  </body>
+</html>
